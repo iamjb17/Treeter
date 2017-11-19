@@ -2,13 +2,14 @@ import java.io.*;
 
 class SaveTreets {
 
+    // Methods to save and load the treets
     static void save(Treet[] treets) {
         // try with resource block for saving treets
         try (
                 ObjectOutputStream oos = new ObjectOutputStream(
                                          new FileOutputStream("treets.ser"))
                 ) {
-            oos.writeObject(treets);
+          oos.writeObject(treets);
         } catch (IOException e) {
             System.out.println("File not saved properly");
             e.printStackTrace();
@@ -28,5 +29,4 @@ class SaveTreets {
         }
         return treets;
     }
-
 }
