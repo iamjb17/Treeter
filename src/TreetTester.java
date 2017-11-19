@@ -8,6 +8,7 @@ public class TreetTester implements Serializable {
     private static final long serialVersionUID = 8922875014907916636L;
 
     public static void main(String[] args) {
+        // Create new treets
         Treet treet = new Treet(
                 "Jessie B",
                 "Not his treet but my Treet. Treets are #tweets basically lol",
@@ -20,12 +21,11 @@ public class TreetTester implements Serializable {
         System.out.printf("This is a new Treet: %s %n",  treet);
         System.out.println("The Word is: ");
 
-        // Testing parsing wards
+        // Testing parsing words
         for (String word: treet.getWords()) {
            System.out.println(word);
         }
-
-        //
+        // Treet Array
         Treet[] ar= {secondTreet, treet};
         Arrays.sort(ar);
         for (Treet test : ar) {
@@ -40,7 +40,5 @@ public class TreetTester implements Serializable {
         for (Treet loaded : reloadedTreets){
             System.out.println(loaded);
         }
-
     }
-
 }
