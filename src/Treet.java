@@ -7,6 +7,7 @@ public class Treet implements Comparable, Serializable {
     private String mAuthor;
     private String mDescription;
     private Date mCreationDate;
+    
     // uncomment to test the loading of the treets
      //String breakIt;
 
@@ -30,7 +31,6 @@ public class Treet implements Comparable, Serializable {
 
     @Override
     public String toString() {
-
         // added date to test sorting treets.
         return String.format("The Treet is: %s \\ %s \\ %s.",
                 mDescription,
